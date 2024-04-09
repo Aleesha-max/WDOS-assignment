@@ -13,13 +13,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>Home page</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="cdn.min.js"></script>
+    <script src="./index.js" type="module"> </script>
+    <script src="./home.js" type="module"> </script>
 </head>
 
-<body>
+<body x-data>
     <header class="header">
         <nav>
             <div class="img">
-               <a href="./index.html"><img src="./images/wildlife.jpg" alt="logo"></a>
+                <a href="./index.html"><img src="./images/wildlife.jpg" alt="logo"></a>
 
             </div>
             <div class="hamburg-menu">
@@ -28,6 +32,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
 
             </div>
@@ -43,20 +49,22 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
             </div>
 
         </nav>
     </header>
     <main>
-        <div class="img2">
+        <div class="img2" onclick="document.updateObjectData('introduction.title','Introduction')">
         </div>
 
 
         <section class="introduction" id="introduction">
             <div class="container">
-                <h2>Introduction to Wildlife</h2>
-                <p>
+                <h2  x-text="$store.home.introduction.title">Introduction</h2>
+                <p x-text="$store.home.introduction.description">
                     Sri Lanka, a teardrop-shaped island nation south of India, explodes with an incredible diversity of
                     wildlife, packed into a relatively small space. From majestic Asian elephants trumpeting through
                     verdant jungles to elusive leopards slinking through misty mountains, the island's protected areas
@@ -74,7 +82,7 @@
 
         <section class="quote">
             <div class="quote1">
-                <p>
+                <p x-html="$store.home.quote">
                     "The wildlife of Sri Lanka is a magical tapestry woven with shimmering leopards, trumpeting
                     elephants, and kaleidoscopic flocks of birds. To witness it is a privilege that stirs the soul."
                     <br>
@@ -89,20 +97,20 @@
         <section class="Aerial">
             <div class="container">
                 <div class="left">
-                    <h2 class="font-shadow"> Aerial animals </h2>
-                    <p> From the emerald depths of Sinharaja Forest to the sapphire coasts teeming with marine life, Sri
+                    <h2 class="font-shadow" x-text="$store.home.aerial_animals.title"> Aerial animals </h2>
+                    <p x-html="$store.home.aerial_animals.description"> From the emerald depths of Sinharaja Forest to the sapphire coasts teeming with marine life, Sri
                         Lanka offers a breathtaking aerial view of its diverse wildlife. Soaring above the canopy,
                         witness troops of toque macaques swinging through the verdant tapestry, their mischievous calls
                         echoing through the air. Gliding along the coastline, pods of playful dolphins weave through
                         turquoise waters, their sleek bodies flashing in the sunlight.
-                    <p>In the arid plains of Yala National Park, herds of majestic Asian elephants, the gentle giants of
+                        In the arid plains of Yala National Park, herds of majestic Asian elephants, the gentle giants of
                         the island, trundle across the golden grasslands, their wrinkled skin and tusks creating a
                         mesmerizing pattern. And as the sun dips below the horizon, casting an orange glow over the
                         landscape, flocks of vibrant painted storks take flight, their wings painting the sky in a
                         mesmerizing ballet. This aerial tapestry of Sri Lanka's wildlife is a testament to the island's
                         rich biodiversity and natural beauty, leaving you with a sense of wonder and awe. Some of the
                         aerial animals are listed below,</p>
-                    <ul>
+                    <ul x-html="$store.home.aerial_animals.u_list">
                         <li> Sri Lankan macaques</li>
                         <li> Peacocks</li>
                         <li> Eagles</li>
@@ -114,7 +122,6 @@
                 </div>
                 <div class="right"></div>
 
-
             </div>
         </section>
 
@@ -122,15 +129,15 @@
             <div class="container">
                 <div class="right"> </div>
                 <div class="left">
-                    <h2 class="font-shadow"> Terrestial animals </h2>
-                    <p>From the lush rainforests to the arid plains, Sri Lanka's terrestrial wildlife dazzles with
+                    <h2 class="font-shadow" x-text="$store.home.terrestial_animals.title"> Terrestial animals </h2>
+                    <p x-html="$store.home.terrestial_animals.description" >From the lush rainforests to the arid plains, Sri Lanka's terrestrial wildlife dazzles with
                         diversity. Gentle giants like Asian elephants roam the grasslands, their wrinkled skin and
                         mighty tusks creating a timeless spectacle. In the verdant embrace of Sinharaja, troops of
                         mischievous toque macaques swing through the ancient trees, their calls echoing through the
                         emerald labyrinth. Yala National Park, meanwhile, becomes a stage for elusive leopards, their
                         sleek forms slinking through the golden savanna. But the drama doesn't end there.
 
-                    <p>Sloth bears lumber through the undergrowth, their honey-coated lips and lumbering gait belying
+                        Sloth bears lumber through the undergrowth, their honey-coated lips and lumbering gait belying
                         their surprising agility. And in the twilight hours, purple-faced leaf monkeys paint the canopy
                         with their vibrant fur, their haunting cries carrying on the balmy breeze. This vibrant tapestry
                         of creatures, large and small, is a testament to Sri Lanka's unique blend of habitats and the
@@ -138,7 +145,7 @@
                         jeep-spotting in the national parks, or simply observing the antics of a cheeky chipmunk, Sri
                         Lanka's terrestrial wildlife has something to enthrall every nature enthusiast. Heres the main
                         five hotspots to spot Terrestial animals in Sri Lanka.</p>
-                    <ol type="1">
+                    <ol type="1" x-html="$store.home.terrestial_animals.o_list">
                         <li>Yala National Park</li>
                         <li>Udawalawe National park</li>
                         <li>Hortain Place National park</li>
@@ -156,19 +163,20 @@
         <section class="Aquatic">
             <div class="container">
                 <div class="left">
-                    <h2 class="font-shadow"> Aquatic animals </h2>
-                    <p>From the sun-kissed shores to the depths of sapphire seas, Sri Lanka's aquatic life paints a
+                    <h2 class="font-shadow" x-text="$store.home.aquatic_animals.title"> Aquatic animals </h2>
+                    <p x-text="$store.home.aquatic_animals.description">From the sun-kissed shores to the depths of sapphire seas, Sri Lanka's aquatic life paints a
                         dazzling underwater kaleidoscope. Five of the world's seven marine turtle species grace the
-                        island's sandy beaches, their ancient journeys echoing across millennia.</p>
+                        island's sandy beaches, their ancient journeys echoing across millennia.
 
-                    <p>And in the vibrant coral gardens, an explosion of colors takes center stage: clownfish dance
+                    And in the vibrant coral gardens, an explosion of colors takes center stage: clownfish dance
                         among anemones, parrotfish nibble on coral, and schools of iridescent fish shimmer like living
                         confetti. Sri Lanka's aquatic wildlife is a testament to the island's vibrant marine ecosystems,
                         reminding us of the interconnectedness and fragility of this underwater world. So, whether
                         you're snorkeling through coral reefs or simply marveling at the turtles emerging from the surf,
                         prepare to be mesmerized by the beauty and wonder of Sri Lanka's aquatic realm. Some of the
                         aquatic animals found in Sri Lanka,
-                    <ul>
+                    </p>
+                    <ul x-html="$store.home.aquatic_animals.u_list">
                         <li>Sperms whales</li>
                         <li>Spinner Dolphins</li>
                         <li>Porpoises</li>
@@ -185,9 +193,10 @@
     </main>
     <hr>
 
-     <footer>
-        <p>All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
+    <footer>
+        <p x-text="$store.home.footer">All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
         <div class="icons">
+           
             <a href="https://twitter.com/" target="_blank"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512" aria-hidden="true">
                     <g id="twitter1_layer">
@@ -197,40 +206,62 @@
                     </g>
                 </svg></a>
 
-            <a href="https://facebook.com/" target="_blank"> 
+            <a href="https://facebook.com/" target="_blank">
 
-                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512" aria-hidden="true">
-                        <g id="facebook-f2_layer">
-                            <path
-                                d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229">
-                            </path>
-                        </g>
-                    </svg></a>
-                    <a href="https://youtube.com/" target="_blank"> 
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" aria-hidden="true">
-                <g id="youtube3_layer">
-                    <path
-                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                    </path>
-                </g>
-            </svg></a>
-            <a href="https://instagram.com/" target="_blank"> 
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
-                <g id="instagram6_layer">
-                    <path
-                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                    </path>
-                </g>
-            </svg>
-        </a>
-
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512" aria-hidden="true">
+                    <g id="facebook-f2_layer">
+                        <path
+                            d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229">
+                        </path>
+                    </g>
+                </svg></a>
+            <a href="https://youtube.com/" target="_blank">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" aria-hidden="true">
+                    <g id="youtube3_layer">
+                        <path
+                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                        </path>
+                    </g>
+                </svg></a>
+            <a href="https://instagram.com/" target="_blank">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
+                    <g id="instagram6_layer">
+                        <path
+                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                    </g>
+                </svg>
+            </a>
+            
         </div>
-
+        <br>
+        <button class="login-button" onclick="document.registerNewsletter()">
+            Subscribe to newsletter
+        </button> 
 
 
     </footer>
-    <script src="./index.js"> </script>
 
+    <script>
+        if(!window.localStorage.getItem('home')){
+            fetch('./home.json').then(res => {
+            res.json().then(ress => {
+                console.log(ress)
+
+                window.localStorage.setItem('home', JSON.stringify(ress))
+            })
+        })
+        }
+      
+
+        document.addEventListener('alpine:init', () => {
+
+
+            Alpine.store('home', JSON.parse(window.localStorage.getItem('home')))
+        })
+
+
+    </script>
 </body>
 
 </html>

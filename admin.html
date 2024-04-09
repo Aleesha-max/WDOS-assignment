@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Admin</title>
+</head>
+
+<body x-data>
+<!-- create a admin panel with a table to list regsitered emails and a delete button on the table -->
+
+
+    <h1>Admin Panel</h1>
+    <h4>Newsletter Registrations</h4>
+</div>
+<div class="content">
+    <table>
+        <thead>
+            <th>No.</th>
+            <th>Email</th>
+        </thead>
+        <tbody> 
+            <template x-for="(value,index) in $store.newsletter">
+                <tr>
+                    <td x-text="index + 1"></td>
+                    <td x-text="value.email"></td>
+                    
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</div>
+<script>
+
+  
+
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('newsletter', JSON.parse(window.localStorage.getItem('newsletter')))
+
+    })
+
+
+</script>
+</body>
+</html>
+

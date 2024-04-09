@@ -1,0 +1,45 @@
+{
+    "introduction":{
+        "title":"YALA National Park",
+        "description":"Yala National Park is a stunning wildlife sanctuary in the southeast corner of Sri Lanka. The park encompasses a diverse landscape of moist monsoon forests, dry monsoon forests, semi-deciduous forests, thorn forests, grasslands, marshes, marine wetlands, and sandy beaches. This variety of habitats supports an incredible array of wildlife, making Yala a true nature lover's paradise."
+
+    },
+    "about":{
+        "title":"About Yala National Park",
+        "description":"Yala combines a strict nature reserve with a national park. Divided into 5 blocks, the park has a protected area of nearly 130,000 hectares of land consisting of light forests, scrubs, grasslands, tanks and lagoons. Two blocks are currently opened to the public. situated in Sri Lanka’s south-east hugging the panoramic Indian Ocean, Yala was designated a wildlife sanctuary in 1900 and was designated a national park in 1938. Ironically, the park was initially used as a hunting ground for the elite under British rule. Yala is home to 44 varieties of mammal and 215 bird species. Among its more famous residents are the world’s biggest concentration of leopards,"
+
+    },
+    "elephants":{
+        "title":"Elephants in Yala",
+        "description":"The Sri Lankan subspecies is the largest and also the darkest of the Asian elephants, with patches of depigmentation—areas with no skin color—on its ears, face, trunk and belly."
+
+    },
+    "deers": {
+        "title":"Deers in Yala",
+        "description":"Deer are seen regularly under trees that are occupied by both species of monkeys, the macaque and the gray langur. This is to pick up the tender leaves, flowers and fruits."
+
+    },
+    "peacocks":{
+        "title":"Peacocks in Yala",
+        "description":"The magnificent peacock is a bird native to the island of Sri Lanka, with their distinctive calls being heard all over the jungles."
+
+
+    },
+    "palm_civets":{
+        "title":"Golden Palm Civets in Yala",
+        "description":"The golden palm civet (Paradoxurus zeylonensis) is a viverrid endemic to Sri Lanka. It is listed as Vulnerable on the IUCN Red List."
+
+    },
+    "sloth_bears":{
+        "title":"Sloth Bears in Yala",
+        "description":"The Sri Lankan sloth bear (Melursus ursinus inornatus) is a subspecies of the sloth bear which is found mainly in lowland dry forests in the island of Sri Lanka."
+
+    },
+    "water_buffalo":{
+        "title":"Water Buffalo in Yala",
+        "description":"The wild water buffalo has an ash-gray to black skin. The moderately long, coarse and sparse hair."
+
+    
+    },
+    "footer":"All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka."
+}

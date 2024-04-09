@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>Home page</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./conservation.js" defer></script>
 </head>
 
-<body>
+<body x-data>
     <header class="header">
         <nav>
             <div class="img">
@@ -28,6 +30,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
 
             </div>
@@ -43,6 +47,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
             </div>
 
@@ -50,8 +56,8 @@
     </header>
     <div class="hero-img img3">
         <div class="text-container">
-            <h1>Department of WildLife Conservation</h1>
-            <p>
+            <h1 x-text="$store.conservation.introduction.title">Department of WildLife Conservation</h1>
+            <p x-text="$store.conservation.introduction.description">
                 We share our planet with an estimated 10 million species, each playing a unique role in the web of life.
                 Loss of even a single species can unravel this delicate balance, potentially impacting food webs, water
                 regulation, and even climate. So it is our mission to conserve the biodiversity of Sri Lanka by
@@ -64,8 +70,8 @@
         <div class="text-container1">
             <div class="">
 
-                <h2> About wildlife conservation</h2>
-                <p>
+                <h2 x-text="$store.conservation.about.title"> About wildlife conservation</h2>
+                <p x-text="$store.conservation.about.description">
 
                     The Department of Wildlife Conservation Conserves the Biodiversity of Sri Lanka. Every individual
                     species is
@@ -91,8 +97,8 @@
         <div class="card-container">
             <div class="card">
                 <div class="txt">
-                    <h2 class="font-shadow"> Responsibilities</h2>
-                    <ol>
+                    <h2 class="font-shadow" x-text="$store.conservation.responsibilities.title"> Responsibilities</h2>
+                    <ol x-html="$store.conservation.responsibilities.o_list">
                         <li><b>Managing Protected Areas:</b> The DWC oversees a network of over 120 national
                             parks, nature reserves, and other protected areas, accounting for about 12.5% of Sri
                             Lanka's landmass. </li>
@@ -112,12 +118,12 @@
             <div class="card">
 
                 <div class="txt">
-                    <h2 class="font-shadow"> Key Achievements</h2>
-                    <ol>
+                    <h2 class="font-shadow" x-text="$store.conservation.achievements.title"> Key Achievements</h2>
+                    <ol x-html="$store.conservation.achievements.o_list">
                         <li> Establishing a strong network of protected areas, including iconic parks like Yala,
                             Sinharaja, and Horton Plains.</li>
-                        <li>Successfully recovering populations of endangered species like the Sri Lankan
-                            leopard and the Asian elephant.</li>
+                        <li> Establishing a strong network of protected areas, including iconic parks like Yala,
+                            Sinharaja, and Horton Plains.</li>
                         <li>Raising public awareness about wildlife conservation through educational programs
                             and community engagement initiatives.</li>
                         <li>Regulating the international trade of Sri Lankan wildlife to ensure its
@@ -160,31 +166,11 @@
         </div>
 
     </div>
-    
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     <hr>
      <footer>
-        <p>All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
+        <p x-text="$store.conservation.footer">All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
         <div class="icons">
             <a href="https://twitter.com/" target="_blank"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512" aria-hidden="true">
@@ -224,10 +210,33 @@
 
         </div>
 
+        <button class="login-button" onclick="document.registerNewsletter()">
+            Subscribe to newsletter
+        </button> 
 
 
     </footer>
     <script src="./index.js"> </script>
+    <script>
+        if(!window.localStorage.getItem('conservation')){
+            fetch('./conservation.json').then(res => {
+            res.json().then(ress => {
+                console.log(ress)
+
+                window.localStorage.setItem('conservation', JSON.stringify(ress))
+            })
+        })
+        }
+      
+
+        document.addEventListener('alpine:init', () => {
+
+
+            Alpine.store('conservation', JSON.parse(window.localStorage.getItem('conservation')))
+        })
+
+
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,35 @@
+{
+    "introduction": {
+        "title": "Leopards in Sri Lanka",
+        "description":"stalking through the vibrant tapestry of Sri Lanka's landscape, a realm of emerald jungles, golden grasslands, and sapphire waters. Here, amidst the symphony of life, reigns the Sri Lankan leopard, a creature cloaked in mystery and mesmerizing beauty. Let me introduce you to these magnificent apex predators, the crown jewels of this island nation's wildlife."
+    },
+    "what_are_leopards":{
+        "title":"WHAT ARE LEOPARDS?",
+        "description":"These large carnivores are powerfully built with long bodies, relatively short legs, and a broad head. There are nine subspecies and are distinguished by the unique characteristics of their coats, which range from tawny or light yellow in warm, dry habitats to reddish-orange in dense forests. Their coat is covered in dark, irregular spots called rosettes."
+    },
+    "yala":{
+        "title": "Yala National Park",
+        "description": "This is the land of the leopard kings, boasting the highest leopard density in the world. With around 40 individuals roaming within its borders, Yala offers the best chance of spotting these elusive cats. Experienced safari guides navigate the tracks through the tall grasses, scanning for telltale signs like pugmarks or scrapes on trees. Be patient, and with a bit of luck, you might witness a majestic leopard emerging from the shadows, basking in the sun, or stalking its prey with silent grace."
+    },
+    "wilpattu":{
+        "title": "Wilpattu National Park",
+        "description": "Wilpattu offers a more serene leopard-spotting experience compared to the vibrant activity of Yala. The leopards here, accustomed to slightly less human presence, might be more readily observed basking on tree branches or patrolling their territories. Early mornings and late afternoons are prime times for sightings, as the leopards venture out in search of prey."
+    },
+    "sinharaja": {
+        "title": "Sinharaja Forest Reserve",
+        "description":"While not as commonly seen as in the dry zone parks, leopards do call Sinharaja home. Their presence signifies the health of the rainforest ecosystem, as they play a crucial role as apex predators. Spotting a leopard amidst the dense foliage is a rare privilege, but keep your eyes peeled for pugmarks, scratches on trees, and the watchful gazes of monkeys, which often alert to the presence of a predator."
+    },
+    "threats": "<hr><h2> THREATS ON LEOPARDS</h2><hr>",
+    "habitat_loss":{
+        "title": "1. Habitat Loss and Fragmentation",
+        "description" : "As human populations and activities expand, leopard habitats are being cleared for agriculture, infrastructure development, and other purposes. This leads to a shrinking and fragmentation of their natural territories, making it difficult for them to find food, shelter, and mates.",
+        "o_list":"<li> Habitat loss directly reduces the carrying capacity for leopards, leading to population decline. Fragmented habitats also disrupt natural corridors and hinder their movement, isolating populations and reducing genetic diversity. This can make them more vulnerable to other threats like disease and competition. </li> <br> <li><b>Steps to decline habitat loss and fragmentation:</b> Establishing and expanding protected areas, corridor conservation and sustainable land-use practices:</li>"
+    },
+
+    "poaching":{
+        "title":"2. Combat poaching and the wildlife trade",
+        "description":"Leopards are unfortunately targeted for their beautiful fur, body parts used in traditional medicine, and even as trophies. Poaching is often driven by poverty and lack of economic opportunities in areas surrounding leopard habitats.",
+        "o_list":" <li> Poaching can decimate leopard populations, especially in areas with limited numbers. It also disrupts the natural balance of the ecosystem, as leopards play a crucial role in controlling prey populations. The illegal wildlife trade fuels this threat, creating a lucrative market for poached leopard parts.</li><br> <li><b>Steps to decline combat poaching and the wildlife trade:</b> Strengthening anti-poaching patrol, raising awareness and supporting alternative livelihoods</li>"
+    },
+    "footer": "All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka."
+}

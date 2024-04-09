@@ -12,10 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <script src="./leopard.js" defer></script>
     <title>Home page</title>
 </head>
 
-<body class="leopard-page">
+<body class="leopard-page" x-data>
     <header class="header">
         <nav>
             <div class="img">
@@ -28,6 +29,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
 
             </div>
@@ -43,6 +46,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
             </div>
 
@@ -52,8 +57,8 @@
         <div class="hero-img4">
 
             <div class="intro-leopard">
-                <H1>Leopards in Sri Lanka</H1>
-                <p>
+                <H1 x-text="$store.leopard.introduction.title">Leopards in Sri Lanka</H1>
+                <p x-text="$store.leopard.introduction.description">
 
                     stalking through the vibrant tapestry of Sri Lanka's landscape, a realm of emerald jungles, golden
                     grasslands, and sapphire waters. Here, amidst the symphony of life, reigns the Sri Lankan leopard, a
@@ -64,10 +69,10 @@
         </div>
 
         <div class="leopard-text">
-            <h3>
+            <h3 x-text="$store.leopard.what_are_leopards.title">
                 WHAT ARE LEOPARDS?
             </h3>
-            <p>
+            <p x-text="$store.leopard.what_are_leopards.description">
                 These large carnivores are powerfully built with long bodies, relatively short legs, and a broad head.
                 There are nine subspecies and are distinguished by the unique characteristics of their coats, which
                 range from tawny or light yellow in warm, dry habitats to reddish-orange in dense forests. Their coat is
@@ -80,8 +85,8 @@
                 <div class="card1">
                     <div class="img-container1"></div>
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Yala National Park</h2>
-                        <p>This is the land of the leopard kings, boasting the highest leopard density in the world.
+                        <h2 class="font-shadow1" x-text="$store.leopard.yala.title"> Yala National Park</h2>
+                        <p x-text="$store.leopard.yala.description">This is the land of the leopard kings, boasting the highest leopard density in the world.
                             With around 40 individuals roaming within its borders, Yala offers the best chance of
                             spotting these elusive cats. Experienced safari guides navigate the tracks through the tall
                             grasses, scanning for telltale signs like pugmarks or scrapes on trees. Be patient, and with
@@ -94,8 +99,8 @@
                 <div class="card1">
                     <div class="img-container2"></div>
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Wilpattu National Park</h2>
-                        <p>Wilpattu offers a more serene leopard-spotting experience compared to the vibrant activity of
+                        <h2 class="font-shadow1" x-text="$store.leopard.wilpattu.title"> Wilpattu National Park</h2>
+                        <p x-text="$store.leopard.wilpattu.description">Wilpattu offers a more serene leopard-spotting experience compared to the vibrant activity of
                             Yala. The leopards here, accustomed to slightly less human presence, might be more readily
                             observed basking on tree branches or patrolling their territories. Early mornings and late
                             afternoons are prime times for sightings, as the leopards venture out in search of prey.</p>
@@ -107,8 +112,8 @@
                 <div class="card1">
                     <div class="img-container3"></div>
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Sinharaja Forest Reserve</h2>
-                        <p> While not as commonly seen as in the dry zone parks, leopards do call Sinharaja home. Their
+                        <h2 class="font-shadow1" x-text="$store.leopard.sinharaja.title"> Sinharaja Forest Reserve</h2>
+                        <p x-text="$store.leopard.sinharaja.description"> While not as commonly seen as in the dry zone parks, leopards do call Sinharaja home. Their
                             presence signifies the health of the rainforest ecosystem, as they play a crucial role as
                             apex predators. Spotting a leopard amidst the dense foliage is a rare privilege, but keep
                             your eyes peeled for pugmarks, scratches on trees, and the watchful gazes of monkeys, which
@@ -124,9 +129,9 @@
         </section>
 
         <section class="threats">
-            <div class="title">
+            <div class="title" x-html="$store.leopard.threats">
                 <hr>
-                <h2> THREATS ON LEOPARDS</h2>
+                <h2 > THREATS ON LEOPARDS</h2>
                 <hr>
             </div>
         </section>
@@ -134,11 +139,11 @@
         <section class="leopard-threats">
             <div class="container">
                 <div class="left">
-                    <h2 class="font-shadow1">1. Habitat Loss and Fragmentation</h2>
-                    <p>As human populations and activities expand, leopard habitats are being cleared for agriculture,
+                    <h2 class="font-shadow1" x-text="$store.leopard.habitat_loss.title">1. Habitat Loss and Fragmentation</h2>
+                    <p x-text="$store.leopard.habitat_loss.description">As human populations and activities expand, leopard habitats are being cleared for agriculture,
                         infrastructure development, and other purposes. This leads to a shrinking and fragmentation of
                         their natural territories, making it difficult for them to find food, shelter, and mates.</p>
-                    <ul>
+                    <ul x-text="$store.leopard.habitat_loss.o_list">
                         <li> Habitat loss directly reduces the carrying capacity for leopards, leading to population
                             decline. Fragmented habitats also disrupt natural corridors and hinder their movement,
                             isolating populations and reducing genetic diversity. This can make them more vulnerable to
@@ -158,11 +163,11 @@
             <div class="container">
                 <div class="right"> </div>
                 <div class="left">
-                    <h2 class="font-shadow1">2. Combat poaching and the wildlife trade </h2>
-                    <p> Leopards are unfortunately targeted for their beautiful fur, body parts used in traditional
+                    <h2 class="font-shadow1" x-text="$store.leopard.poaching.title">2. Combat poaching and the wildlife trade </h2>
+                    <p x-text="$store.leopard.poaching.description"> Leopards are unfortunately targeted for their beautiful fur, body parts used in traditional
                         medicine, and even as trophies. Poaching is often driven by poverty and lack of economic
                         opportunities in areas surrounding leopard habitats.</p>
-                    <ul>
+                    <ul x-text="$store.leopard.poaching.o_list">
                         <li> Poaching can decimate leopard populations, especially in areas with limited numbers. It
                             also disrupts the natural balance of the ecosystem, as leopards play a crucial role in
                             controlling prey populations. The illegal wildlife trade fuels this threat, creating a
@@ -192,7 +197,7 @@
 
     <hr>
      <footer>
-        <p>All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
+        <p x-text="$store.leopard.footer">All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
         <div class="icons">
             <a href="https://twitter.com/" target="_blank"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512" aria-hidden="true">
@@ -232,10 +237,33 @@
 
         </div>
 
+        <button class="login-button" onclick="document.registerNewsletter()">
+            Subscribe to newsletter
+        </button> 
 
 
     </footer>
     <script src="./index.js"> </script>
+    <script>
+        if(!window.localStorage.getItem('leopard')){
+            fetch('./leopard.json').then(res => {
+            res.json().then(ress => {
+                console.log(ress)
+
+                window.localStorage.setItem('leopard', JSON.stringify(ress))
+            })
+        })
+        }
+      
+
+        document.addEventListener('alpine:init', () => {
+
+
+            Alpine.store('leopard', JSON.parse(window.localStorage.getItem('leopard')))
+        })
+
+
+    </script>
 </body>
 
 </html>

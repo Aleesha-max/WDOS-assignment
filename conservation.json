@@ -1,0 +1,18 @@
+{
+    "introduction": {
+        "title": "Department of WildLife Conservation",
+        "description": "We share our planet with an estimated 10 million species, each playing a unique role in the web of life. Loss of even a single species can unravel this delicate balance, potentially impacting food webs, water regulation, and even climate. So it is our mission to conserve the biodiversity of Sri Lanka by protecting its wildlife and habitats."
+    },
+    "about":{
+        "title": "About wildlife conservation",
+        "description": "The Department of Wildlife Conservation Conserves the Biodiversity of Sri Lanka. Every individual species is provided legal protection through the Fauna and Flora Protection Ordinance No 2 of 1937. Habitats and the associated biodiversity are protected through a network of Protected Areas. International Trade of Wild Species are Regulated both using the provisions Fauna and Flora Protection Ordinance a the Provisions of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES)."
+    },
+    "responsibilities":{
+        "title": "Responsibilities",
+        "o_list":"<li><b>Managing Protected Areas:</b> The DWC oversees a network of over 120 national parks, nature reserves, and other protected areas, accounting for about 12.5% of Sri Lanka's landmass. </li><li><b>Enforcing Wildlife Protection Laws:</b> The DWC enforces the Fauna and Flora Protection Ordinance, which protects all wild animals and plants in Sri Lanka.</li><li><b>Research and Monitoring:</b> The DWC conducts research on wildlife populations, habitats, and threats to inform conservation strategies. </li><li><b>Public Awareness and Education:</b> The DWC raises awareness about the importance of wildlife conservation through educational programs, outreach initiatives, and community engagement.</li><li><b>International Collaboration:</b> The DWC collaborates with international organizations and other countries on conservation initiatives</li>"
+    },
+    "achievements": {
+        "title": "Key Achievements",
+        "o_list": "<li> Establishing a strong network of protected areas, including iconic parks like Yala, Sinharaja, and Horton Plains.</li> <li> Establishing a strong network of protected areas, including iconic parks like Yala,  Sinharaja, and Horton Plains.</li><li>Raising public awareness about wildlife conservation through educational programs and community engagement initiatives.</li> <li>Regulating the international trade of Sri Lankan wildlife to ensure its sustainability.</li>"
+    }
+}

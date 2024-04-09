@@ -14,9 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Home page</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./wilpattu.js" defer></script>
 </head>
 
-<body>
+<body x-data>
     <header class="header">
         <nav>
             <div class="img">
@@ -29,6 +31,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
 
             </div>
@@ -44,6 +48,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
             </div>
 
@@ -56,8 +62,8 @@
         <div class="hero-img6">
 
             <div class="intro-wilpattu">
-                <H1>Wilpattu National Park</H1>
-                <p>
+                <H1 x-text="$store.wilpattu.introduction.title">Wilpattu National Park</H1>
+                <p x-text="$store.wilpattu.introduction.description">
 
                     Welcome to the lush wilderness of Wilpattu National Park (WNP). Ranging over 131 thousand hectares,
                     it is Sri Lanka’s largest and one of the oldest protected areas. The park consists of five blocks
@@ -72,8 +78,8 @@
             <div class="text-container1">
                 <div class="">
 
-                    <h2> About Wilpattu National Park</h2>
-                    <p>
+                    <h2 x-text="$store.wilpattu.about.title"> About Wilpattu National Park</h2>
+                    <p x-text="$store.wilpattu.about.description">
 
                         Wilpattu National Park spans across the Puttalam and Anuradhapura districts, and borders the
                         Mannar and Vavuniya Districts. The area is one of the most important elephant habitats in the
@@ -100,9 +106,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Elephants in Wilpattu</h2>
+                        <h2 class="font-shadow1" x-text="$store.wilpattu.elephants.title"> Elephants in Wilpattu</h2>
                         <div class="img-container1"></div>
-                        <p>Wilpattu National Park is a true paradise for elephant aficionados. These gentle giants roam the park's diverse landscapes, offering unforgettable encounters for anyone lucky enough  </p>
+                        <p x-text="$store.wilpattu.elephants.description">Wilpattu National Park is a true paradise for elephant aficionados. These gentle giants roam the park's diverse landscapes, offering unforgettable encounters for anyone lucky enough  </p>
                     </div>
 
                 </div>
@@ -111,9 +117,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Spotted Deers in Wilpattu</h2>
+                        <h2 class="font-shadow1" x-text="$store.wilpattu.spotted_deers.title"> Spotted Deers in Wilpattu</h2>
                         <div class="img-container2"></div>
-                        <p> The most commonly encountered deer in Wilpattu, easily identified by their reddish-brown coat with white spots and lyre-shaped antlers in males.
+                        <p x-text="$store.wilpattu.spotted_deers.description"> The most commonly encountered deer in Wilpattu, easily identified by their reddish-brown coat with white spots and lyre-shaped antlers in males.
                             Often spotted grazing in open grasslands or near waterholes</p>
                     </div>
 
@@ -123,9 +129,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Peacocks in Wilpattu</h2>
+                        <h2 class="font-shadow1" x-text="$store.wilpattu.peacocks.title"> Peacocks in Wilpattu</h2>
                         <div class="img-container3"></div>
-                        <p> These flamboyant birds favor open grasslands and mixed forest edges, often spotted near waterholes or rocky outcrops. </p>
+                        <p x-text="$store.wilpattu.peacocks.description"> These flamboyant birds favor open grasslands and mixed forest edges, often spotted near waterholes or rocky outcrops. </p>
                     </div>
 
 
@@ -137,9 +143,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Sambar deers in Wilpattu</h2>
+                        <h2 class="font-shadow1" x-text="$store.wilpattu.sambar_deers.title"> Sambar deers in Wilpattu</h2>
                         <div class="img-container4"></div>
-                        <p>The Sambar deer, undoubtedly the monarchs of Wilpattu's herbivore kingdom, hold a special place in the hearts of those who've encountered their majestic presence. </p>
+                        <p x-text="$store.wilpattu.sambar_deers.description"> The Sambar deer, undoubtedly the monarchs of Wilpattu's herbivore kingdom, hold a special place in the hearts of those who've encountered their majestic presence. </p>
                     </div>
 
                 </div>
@@ -148,9 +154,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Crocodiles in Wilpattu</h2>
+                        <h2 class="font-shadow1" x-text="$store.wilpattu.crocodiles.title"> Crocodiles in Wilpattu</h2>
                         <div class="img-container5"></div>
-                        <p>
+                        <p x-text="$store.wilpattu.crocodiles.description">
                             While overshadowed by the park's majestic elephants and elusive leopards, the crocodiles of Wilpattu National Park add a thrilling dimension to any wildlife encounter.</p>
                     </div>
 
@@ -160,9 +166,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Rusty spotted cat in Wilpattu</h2>
+                        <h2 class="font-shadow1" x-text="$store.wilpattu.cat.title"> Rusty spotted cat in Wilpattu</h2>
                         <div class="img-container6"></div>
-                        <p>  The world's smallest wild cat, this enigmatic creature thrives in Wilpattu's undergrowth. Spotting them is a rare treat, but their ginger spotted coats and piercing eyes leave a lasting impression. </p>
+                        <p x-text="$store.wilpattu.cat.description">  The world's smallest wild cat, this enigmatic creature thrives in Wilpattu's undergrowth. Spotting them is a rare treat, but their ginger spotted coats and piercing eyes leave a lasting impression. </p>
                     </div>
 
 
@@ -215,7 +221,7 @@
 
     <hr>
      <footer>
-        <p>All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
+        <p x-text="$store.wilpattu.footer">All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
         <div class="icons">
             <a href="https://twitter.com/" target="_blank"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512" aria-hidden="true">
@@ -255,10 +261,33 @@
 
         </div>
 
+        <button class="login-button" onclick="document.registerNewsletter()">
+            Subscribe to newsletter
+        </button> 
 
 
     </footer>
     <script src="./index.js"> </script>
+    <script>
+        if(!window.localStorage.getItem('wilpattu')){
+            fetch('./wilpattu.json').then(res => {
+            res.json().then(ress => {
+                console.log(ress)
+
+                window.localStorage.setItem('wilpattu', JSON.stringify(ress))
+            })
+        })
+        }
+      
+
+        document.addEventListener('alpine:init', () => {
+
+
+            Alpine.store('wilpattu', JSON.parse(window.localStorage.getItem('wilpattu')))
+        })
+
+
+    </script>
 </body>
 
 </html>

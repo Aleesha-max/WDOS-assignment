@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>Introduction</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./introduction.js" defer> </script>
 </head>
 
-<body>
+<body x-data>
     <header class="header">
         <nav>
             <div class="img">
@@ -28,6 +30,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
 
             </div>
@@ -43,6 +47,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
             </div>
 
@@ -52,8 +58,8 @@
 
         <div class="hero-img img2">
             <div class="text-container">
-                <h1>Introduction</h1>
-                <p>Sri Lanka is a bio-diversity hotspot, home to a variety of wildlife that can be found in its national
+                <h1 x-text="$store.introduction.introduction.title">Introduction</h1>
+                <p x-text="$store.introduction.introduction.description">Sri Lanka is a bio-diversity hotspot, home to a variety of wildlife that can be found in its national
                     parks, forests, and coastal areas. Here are some of the best places to see wildlife in Sri Lanka,
                 </p>
             </div>
@@ -64,8 +70,8 @@
                 <div class="card">
                     <div class="img-container"></div>
                     <div class="txt">
-                        <h2 class="font-shadow"> Sinharaja Forest Reserve</h2>
-                        <p>Sri Lanka's Sinharaja Forest Reserve, a UNESCO haven and biodiversity hotspot, shelters over
+                        <h2 class="font-shadow" x-text="$store.introduction.sinharaja.title"> Sinharaja Forest Reserve</h2>
+                        <p x-text="$store.introduction.sinharaja.description">Sri Lanka's Sinharaja Forest Reserve, a UNESCO haven and biodiversity hotspot, shelters over
                             60% endemic trees, 50% endemic species like the Purple-faced Langur, and shy wonders like
                             the Sri Lankan Leopard, all amidst waterfalls, vibrant calls of the Spurfowl, and dappled
                             sunlight on the rainforest floor. This emerald paradise awaits exploration, with hikes,
@@ -76,8 +82,8 @@
                 <div class="card">
                     <div class="img-container"></div>
                     <div class="txt">
-                        <h2 class="font-shadow"> Minneriya National Park</h2>
-                        <p>Minneriya National Park, an emerald necklace around Sri Lanka's Minneriya reservoir,
+                        <h2 class="font-shadow" x-text="$store.introduction.minneriya.title"> Minneriya National Park</h2>
+                        <p x-text="$store.introduction.minneriya.description">Minneriya National Park, an emerald necklace around Sri Lanka's Minneriya reservoir,
                             pulsates with the rhythm of the wild. Picture this: a savanna dotted with trees, where
                             herds of wild elephants numbering over 300 gather during the dry season, transforming the
                             landscape into a breathtaking sea of grey giants. Their trumpeting calls mingle with the
@@ -92,8 +98,8 @@
                 <div class="card">
                     <div class="img-container"></div>
                     <div class="txt">
-                        <h2 class="font-shadow"> Udawalawe National Park</h2>
-                        <p>Udawalawe National Park, an Eden carved from Sri Lanka's dry plains, is a haven for majestic
+                        <h2 class="font-shadow" x-text="$store.introduction.udawalawe.title"> Udawalawe National Park</h2>
+                        <p x-text="$store.introduction.udawalawe.description">Udawalawe National Park, an Eden carved from Sri Lanka's dry plains, is a haven for majestic
                             elephants.
                             Picture hundreds of these giants grazing the grasslands, trumpeting calls echoing across the
                             landscape.
@@ -137,7 +143,7 @@
         <section class="info">
             <div class="title">
                 <hr>
-                <h2> More about Animals </h2>
+                <h2 x-text="$store.introduction.tableTopic"> More about Animals </h2>
                 <hr>
             </div>
 
@@ -268,8 +274,7 @@
                                 </td>
                             </tr>
 
-
-
+                           
                         </tbody>
                         <tfoot>
                             <tr>
@@ -296,7 +301,7 @@
     </main>
     <hr>
      <footer>
-        <p>All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
+        <p x-text="$store.introduction.footer">All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
         <div class="icons">
             <a href="https://twitter.com/" target="_blank"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512" aria-hidden="true">
@@ -336,10 +341,33 @@
 
         </div>
 
+        <button class="login-button" onclick="document.registerNewsletter()">
+            Subscribe to newsletter
+        </button> 
 
 
     </footer>
     <script src="./index.js"> </script>
+    <script>
+        if(!window.localStorage.getItem('introduction')){
+            fetch('./introduction.json').then(res => {
+            res.json().then(ress => {
+                console.log(ress)
+
+                window.localStorage.setItem('introduction', JSON.stringify(ress))
+            })
+        })
+        }
+      
+
+        document.addEventListener('alpine:init', () => {
+
+
+            Alpine.store('introduction', JSON.parse(window.localStorage.getItem('introduction')))
+        })
+
+
+    </script>
 </body>
 
 </html>
