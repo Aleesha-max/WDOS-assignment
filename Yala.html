@@ -14,9 +14,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Home page</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./yala.js" defer></script>
 </head>
 
-<body>
+<body x-data>
     <header class="header">
         <nav>
             <div class="img">
@@ -29,6 +31,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
 
             </div>
@@ -44,6 +48,8 @@
                     <li><a href="./conservation.html">Department of wildlife conservation</a></li>
                     <li><a href="./leopard.html">Sri Lankan Leopard</a></li>
                     <li><a href="./Animals.html">Animals in Sri Lanka</a></li>
+                    <li><a href="./admin.html"> Admin</a></li>
+                    <button class="login-button"><a href="./login.html">LOGIN</a> </button>
                 </ul>
             </div>
 
@@ -56,8 +62,8 @@
         <div class="hero-img6">
 
             <div class="intro-yala">
-                <H1>YALA National Park</H1>
-                <p class="animated-text">
+                <H1 x-text="$store.yala.introduction.title">YALA National Park</H1>
+                <p class="animated-text" x-text="$store.yala.introduction.description">
 
                     Yala National Park is a stunning wildlife sanctuary in the southeast corner of Sri Lanka. The park
                     encompasses a diverse landscape of moist monsoon forests, dry monsoon forests, semi-deciduous
@@ -72,8 +78,8 @@
             <div class="text-container1">
                 <div class="">
 
-                    <h2> About Yala National Park</h2>
-                    <p>
+                    <h2 x-text="$store.yala.about.title"> About Yala National Park</h2>
+                    <p x-text="$store.yala.about.description">
 
                         Yala combines a strict nature reserve with a national park. Divided into 5 blocks, the park has
                         a protected area of nearly 130,000 hectares of land consisting of light forests, scrubs,
@@ -101,9 +107,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Elephants in Yala</h2>
+                        <h2 class="font-shadow1" x-text="$store.yala.elephants.title"> Elephants in Yala</h2>
                         <div class="img-container1"></div>
-                        <p>The Sri Lankan subspecies is the largest and also the darkest of the Asian elephants, with
+                        <p x-text="$store.yala.elephants.description">The Sri Lankan subspecies is the largest and also the darkest of the Asian elephants, with
                             patches of depigmentation—areas with no skin color—on its ears, face, trunk and belly. </p>
                     </div>
 
@@ -113,9 +119,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Deers in Yala</h2>
+                        <h2 class="font-shadow1" x-text="$store.yala.deers.title"> Deers in Yala</h2>
                         <div class="img-container2"></div>
-                        <p> Deer are seen regularly under trees that are occupied by both species of monkeys, the
+                        <p x-text="$store.yala.deers.description">  Deer are seen regularly under trees that are occupied by both species of monkeys, the
                             macaque and the gray langur. This is to pick up the tender leaves, flowers and fruits.</p>
                     </div>
 
@@ -125,9 +131,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Peacocks in Yala</h2>
-                        <div class="img-container3"></div>
-                        <p> The magnificent peacock is a bird native to the island of Sri Lanka, with their distinctive
+                        <h2 class="font-shadow1" x-text="$store.yala.peacocks.title"> Peacocks in Yala</h2>
+                        <div class="img-container3" ></div>
+                        <p x-text="$store.yala.peacocks.description"> The magnificent peacock is a bird native to the island of Sri Lanka, with their distinctive
                             calls being heard all over the jungles. </p>
                     </div>
 
@@ -140,9 +146,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Golden Palm Civets in Yala</h2>
+                        <h2 class="font-shadow1" x-text="$store.yala.palm_civets.title"> Golden Palm Civets in Yala</h2>
                         <div class="img-container4"></div>
-                        <p>The golden palm civet (Paradoxurus zeylonensis) is a viverrid endemic to Sri Lanka. It is
+                        <p x-text="$store.yala.palm_civets.description">The golden palm civet (Paradoxurus zeylonensis) is a viverrid endemic to Sri Lanka. It is
                             listed as Vulnerable on the IUCN Red List. </p>
                     </div>
 
@@ -152,9 +158,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Sloth Bears in Yala</h2>
+                        <h2 class="font-shadow1" x-text="$store.yala.sloth_bears.title"> Sloth Bears in Yala</h2>
                         <div class="img-container5"></div>
-                        <p>The Sri Lankan sloth bear (Melursus ursinus inornatus) is a subspecies of the sloth bear
+                        <p x-text="$store.yala.sloth_bears.description">The Sri Lankan sloth bear (Melursus ursinus inornatus) is a subspecies of the sloth bear
                             which is found mainly in lowland dry forests in the island of Sri Lanka.</p>
                     </div>
 
@@ -164,9 +170,9 @@
                 <div class="card1">
 
                     <div class="txt1">
-                        <h2 class="font-shadow1"> Water Buffalo in Yala</h2>
+                        <h2 class="font-shadow1" x-text="$store.yala.water_buffalo.title"> Water Buffalo in Yala</h2>
                         <div class="img-container6"></div>
-                        <p> The wild water buffalo has an ash-gray to black skin. The moderately long, coarse and sparse
+                        <p x-text="$store.yala.water_buffalo.description"> The wild water buffalo has an ash-gray to black skin. The moderately long, coarse and sparse
                             hair. </p>
                     </div>
 
@@ -221,7 +227,7 @@
 
     <hr>
     <footer>
-        <p>All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
+        <p x-text="$store.yala.footer">All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka. </p><br>
         <div class="icons">
             <a href="https://twitter.com/" target="_blank"> <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512" aria-hidden="true">
@@ -261,10 +267,33 @@
 
         </div>
 
+        <button class="login-button" onclick="document.registerNewsletter()">
+            Subscribe to newsletter
+        </button> 
 
 
     </footer>
     <script src="./index.js"> </script>
+    <script>
+        if(!window.localStorage.getItem('yala')){
+            fetch('./yala.json').then(res => {
+            res.json().then(ress => {
+                console.log(ress)
+
+                window.localStorage.setItem('yala', JSON.stringify(ress))
+            })
+        })
+        }
+      
+
+        document.addEventListener('alpine:init', () => {
+
+
+            Alpine.store('yala', JSON.parse(window.localStorage.getItem('yala')))
+        })
+
+
+    </script>
 </body>
 
 </html>

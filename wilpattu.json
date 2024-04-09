@@ -1,0 +1,42 @@
+{
+    "introduction":{
+        "title":"Wilpattu National Park",
+        "description":"Welcome to the lush wilderness of Wilpattu National Park (WNP). Ranging over 131 thousand hectares, it is Sri Lanka’s largest and one of the oldest protected areas. The park consists of five blocks declared between 1938-1973 under the Fauna and Flora Protection Ordinance and is managed by the Department of Wildlife Conservation."
+
+    },
+    "about":{
+        "title":"About Wilpattu National Park",
+        "description":"Wilpattu National Park spans across the Puttalam and Anuradhapura districts, and borders the Mannar and Vavuniya Districts. The area is one of the most important elephant habitats in the country and is also a great place to observe the elusive Sri Lankan leopard and the sloth bear. This park has a denser forest cover unlike many other National Parks in Sri Lanka. WNPs landscape comprises of dry zone forests and thorny scrub interspersed with extensive open plains, sand dunes and the unique Villu wetlands. Bare reddish cliffs rising abruptly from narrow beaches of the Portugal Bay and Dutch Bay are another striking feature of its landscape."
+
+    },
+    "elephants":{
+        "title": "Elephants in Wilpattu",
+        "description":"Wilpattu National Park is a true paradise for elephant aficionados. These gentle giants roam the park's diverse landscapes, offering unforgettable encounters for anyone lucky enough"
+
+    },
+    "spotted_deers":{
+        "title":"Spotted Deers in Wilpattu",
+        "description":"The most commonly encountered deer in Wilpattu, easily identified by their reddish-brown coat with white spots and lyre-shaped antlers in males. Often spotted grazing in open grasslands or near waterholes"
+
+    },
+    "peacocks":{
+        "title":"Peacocks in Wilpattu",
+        "description": "These flamboyant birds favor open grasslands and mixed forest edges, often spotted near waterholes or rocky outcrops."
+
+    },
+    "sambar_deers":{
+        "title":"Sambar deers in Wilpattu",
+        "description":"The Sambar deer, undoubtedly the monarchs of Wilpattu's herbivore kingdom, hold a special place in the hearts of those who've encountered their majestic presence."
+
+    },
+    "crocodiles":{
+        "title":"Crocodiles in Wilpattu",
+        "description":"While overshadowed by the park's majestic elephants and elusive leopards, the crocodiles of Wilpattu National Park add a thrilling dimension to any wildlife encounter."
+
+    },
+    "cat":{
+        "title":"Rusty spotted cat in Wilpattu",
+        "description":"The world's smallest wild cat, this enigmatic creature thrives in Wilpattu's undergrowth. Spotting them is a rare treat, but their ginger spotted coats and piercing eyes leave a lasting impression."
+    },
+    "footer":"All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka."
+}

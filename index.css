@@ -1,4 +1,18 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {   /*styles applied to the entire body of the code*/
     width: 100vw;
     height: 100vh;
@@ -1063,3 +1077,39 @@ ol {
 .header .hamburg-menu {
     display: none;
 }
+
+.edit-content{
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(255,255,255, 0.5);
+    color: black;
+}
+
+* {
+    position: relative;
+}
+
+.login-button {
+    font-family: poppins;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.login-button a{
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+

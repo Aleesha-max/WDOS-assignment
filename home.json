@@ -1,0 +1,30 @@
+ {
+    "introduction": {
+        "title": "Introduction to Wildlife",
+        "description": "Sri Lanka, a teardrop-shaped island nation south of India, explodes with an incredible diversity of wildlife, packed into a relatively small space. From majestic Asian elephants trumpeting through verdant jungles to elusive leopards slinking through misty mountains, the island's protected areas teem with life. Witness the \"Gathering,\" where hundreds of elephants congregate at Minneriya National Park, or spot playful toque macaques swinging through the ancient ruins of Sigiriya. The dazzling underwater world off its coasts boasts playful dolphins, graceful manta rays, and even the occasional whale shark, while vibrant birdlife like hornbills and peacocks paint the skies. This island paradise is a haven for nature lovers, offering a chance to witness the untamed beauty of the animal kingdom at every turn."
+    },
+     
+    "quote": "\"The wildlife of Sri Lanka is a magical tapestry woven with shimmering leopards, trumpeting elephants, and kaleidoscopic flocks of birds. To witness it is a privilege that stirs the soul.\"<br> - Mark Whitman, nature photographer.",
+
+    "aerial_animals":{
+        "title": "Aerial animals" ,
+        "description": "From the emerald depths of Sinharaja Forest to the sapphire coasts teeming with marine life, Sri Lanka offers a breathtaking aerial view of its diverse wildlife. Soaring above the canopy, witness troops of toque macaques swinging through the verdant tapestry, their mischievous calls echoing through the air. Gliding along the coastline, pods of playful dolphins weave through turquoise waters, their sleek bodies flashing in the sunlight.<br > <br > In the arid plains of Yala National Park, herds of majestic Asian elephants, the gentle giants of the island, trundle across the golden grasslands, their wrinkled skin and tusks creating a mesmerizing pattern. And as the sun dips below the horizon, casting an orange glow over the landscape, flocks of vibrant painted storks take flight, their wings painting the sky in a mesmerizing ballet. This aerial tapestry of Sri Lanka's wildlife is a testament to the island's rich biodiversity and natural beauty, leaving you with a sense of wonder and awe. Some of the aerial animals are listed below,",
+        "u_list":" <li> Sri Lankan macaques</li><li> Peacocks</li><li> Eagles</li><li> Sri Lankan Blue Magpie</li><li>Sri Lankan Jungle fowl</li><li>Serendib scops owl</li>" 
+
+    },
+
+    "terrestial_animals": {
+        "title": "Terrestial animals",
+        "description": "From the lush rainforests to the arid plains, Sri Lanka's terrestrial wildlife dazzles with diversity. Gentle giants like Asian elephants roam the grasslands, their wrinkled skin and mighty tusks creating a timeless spectacle. In the verdant embrace of Sinharaja, troops of mischievous toque macaques swing through the ancient trees, their calls echoing through the emerald labyrinth. Yala National Park, meanwhile, becomes a stage for elusive leopards, their sleek forms slinking through the golden savanna. But the drama doesn't end there. Sloth bears lumber through the undergrowth, their honey-coated lips and lumbering gait belying their surprising agility. And in the twilight hours, purple-faced leaf monkeys paint the canopy with their vibrant fur, their haunting cries carrying on the balmy breeze. This vibrant tapestry of creatures, large and small, is a testament to Sri Lanka's unique blend of habitats and the island's commitment to conservation. So, whether you're trekking through the rainforest, jeep-spotting in the national parks, or simply observing the antics of a cheeky chipmunk, Sri Lanka's terrestrial wildlife has something to enthrall every nature enthusiast. Heres the main five hotspots to spot Terrestial animals in Sri Lanka.", 
+        "o_list": "<li>Yala National Park</li><li>Udawalawe National park</li><li>Hortain Place National park</li><li>Wilpattu National park</li><li>Minneriya National park</li>"
+    },
+
+    "aquatic_animals": {
+        "title": "Aquatic animals",
+        "description": "From the sun-kissed shores to the depths of sapphire seas, Sri Lanka's aquatic life paints a dazzling underwater kaleidoscope. Five of the world's seven marine turtle species grace the island's sandy beaches, their ancient journeys echoing across millennia. And in the vibrant coral gardens, an explosion of colors takes center stage: clownfish dance among anemones, parrotfish nibble on coral, and schools of iridescent fish shimmer like living confetti. Sri Lanka's aquatic wildlife is a testament to the island's vibrant marine ecosystems, reminding us of the interconnectedness and fragility of this underwater world. So, whether you're snorkeling through coral reefs or simply marveling at the turtles emerging from the surf, prepare to be mesmerized by the beauty and wonder of Sri Lanka's aquatic realm. Some of the aquatic animals found in Sri Lanka,",
+        "u_list": "<li>Sperms whales</li><li>Spinner Dolphins</li><li>Porpoises</li><li>Dugongs</li>"
+    },
+
+    "footer": "All rights reserved by the government of sri lanka. Located in Colombo, Sri Lanka."
+
+ }
